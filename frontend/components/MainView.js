@@ -1,8 +1,19 @@
 import React from 'react'
+import Signup from './Signup'
+
+let isAccount = false
 
 const MainView = () => {
   return (
-    <div>MainView</div>
+    <>
+      {isAccount ? (
+        <div>
+          Titoks will go here
+        </div>
+      ): (
+        <Signup />
+      )}
+    </>
   )
 }
 
