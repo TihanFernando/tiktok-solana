@@ -1,40 +1,36 @@
 import React from 'react'
-import styles from '../styles/Signup.module.css'
+import style from '../styles/Signup.module.css'
 
 export const Signup = () => {
 
   return (
-    <div className={styles.authContainer}>
-      <h1 className={styles.title}>Sign up to use TikTok</h1>
-      <div className={styles.signupForm}>
-          <div className={styles.inputField}>
-              <div className={styles.inputTitle}>
-                  Username:
-              </div>
-              <div className={styles.inputContainer}>
-                  <input
-                    className={styles.input}
-                    type="text"
-                    //onChange
-                  />
-              </div>
+    <div className={style.authContainer}>
+      <h1 className={style.title}>Sign up to use TikTok</h1>
+      <div className={style.signupForm}>
+        <div className={style.inputField}>
+          <div className={style.inputTitle}>Username:</div>
+          <div className={style.inputContainer}>
+            <input
+              className={style.input}
+              type='text'
+              onChange={e => setUserName(e.target.value)}
+            />
           </div>
-          <div className={styles.inputField}>
-              <div className={styles.inputTitle}>
-                  Profile Image:
-              </div>
-              <div className={styles.inputContainer}>
-                <input
-                    className={styles.input}
-                    type="text"
-                    //onChange={}
-                />
-              </div>
+        </div>
+        <div className={style.inputField}>
+          <div className={style.inputTitle}>Profile Image:</div>
+          <div className={style.inputContainer}>
+            <input
+              className={style.input}
+              type='text'
+              onChange={e => setProfile(e.target.value)}
+            />
           </div>
+        </div>
       </div>
 
-      <div className={styles.loginButton}>
-          Sign up
+      <div className={style.loginButton}>
+        Sign up
       </div>
     </div>
   )
