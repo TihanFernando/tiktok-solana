@@ -1,8 +1,9 @@
 import React from 'react'
 import style from '../styles/Signup.module.css'
+import { useState } from 'react'
 
-export const Signup = () => {
-
+export const Signup = ({signup}) => {
+  console.log(signup)
   return (
     <div className={style.authContainer}>
       <h1 className={style.title}>Sign up to use TikTok</h1>
