@@ -3,7 +3,15 @@ import style from '../styles/Signup.module.css'
 import { useState } from 'react'
 
 export const Signup = ({signup}) => {
-  console.log(signup)
+  const [username, setUserName] = useState()
+  const [profile, setProfile] = useState()
+
+  const signUpClicked = () => {
+    console.log("SIGNING UP@!")
+    signup(username, profile)
+  }
+
+  console.log(username, profile)
   return (
     <div className={style.authContainer}>
       <h1 className={style.title}>Sign up to use TikTok</h1>
@@ -30,7 +38,7 @@ export const Signup = ({signup}) => {
         </div>
       </div>
 
-      <div className={style.loginButton}>
+      <div className={style.loginButton} onClick={signUpClicked}>
         Sign up
       </div>
     </div>
